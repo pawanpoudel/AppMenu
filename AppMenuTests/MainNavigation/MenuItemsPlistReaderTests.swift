@@ -10,74 +10,57 @@ import UIKit
 import XCTest
 
 class MenuItemsPlistReaderTests: XCTestCase {
-    func testErrorIsReturnedWhenPlistFileDoesNotExist() {
+    var plistReader: MenuItemsPlistReader?
+    var metadata: [[String : String]]?
+    var error: NSError?
+    
+    override func setUp() {
+        super.setUp()
         
-        var plistReader = MenuItemsPlistReader()
-        plistReader.plistToReadFrom = "notFound.plist"
+        plistReader = MenuItemsPlistReader()
+        plistReader?.plistToReadFrom = "notFound"
+        (metadata, error) = plistReader!.readMenuItems()
+    }
+    
+    func testCorrectErrorDomainIsReturnedWhenPlistDoesNotExist() {
+        let errorDomain = error?.domain
+        XCTAssertEqual(errorDomain!, MenuItemsPlistReaderErrorDomain,
+            "Correct error domain is returned")
+    }
+    
+    func testFileNotFoundErrorCodeIsReturnedWhenPlistDoesNotExist() {
+        let errorCode = error?.code
+        XCTAssertEqual(errorCode!, MenuItemsPlistReaderErrorCode.FileNotFound.toRaw(),
+            "Correct error code is returned")
+    }
+    
+    func testCorrectErrorDescriptionIsReturnedWhenPlistDoesNotExist() {
+        let userInfo = error?.userInfo
+        let description: String = userInfo![NSLocalizedDescriptionKey]! as String
+        XCTAssertEqual(description, "notFound.plist file doesn't exist in app bundle",
+            "Correct error description is returned")
+    }
+    
+    func testPlistIsDeserializedCorrectly() {
+        plistReader!.plistToReadFrom = "testMenuItems"
+        (metadata, error) = plistReader!.readMenuItems()
         
-        var (metadata: [[String : String]]?, error: NSError?) = plistReader.readMenuItems()
-        XCTAssertNotNil(error, "An error is returned when the specified plist file doesn't exist")
+        XCTAssertTrue(metadata?.count == 2, "There should only be two dictionaries in plist")
+        
+        let firstRow = metadata?[0]
+        XCTAssertEqual(firstRow!["title"]!, "Test row 1",
+            "First row's title should be what's in plist")
+        XCTAssertEqual(firstRow!["subTitle"]!, "Test row 1 subtitle",
+            "First row's subtitle should be what's in plist")
+        XCTAssertEqual(firstRow!["iconName"]!, "iconName1",
+            "First row's icon name should be what's in plist")
+        
+        let secondRow = metadata?[1]
+        XCTAssertEqual(secondRow!["title"]!, "Test row 2",
+            "Second row's title should be what's in plist")
+        XCTAssertEqual(secondRow!["subTitle"]!, "Test row 2 subtitle",
+            "Second row's subtitle should be what's in plist")
+        XCTAssertEqual(secondRow!["iconName"]!, "iconName2",
+            "Second row's icon name should be what's in plist")
     }
 }
-
-//class MenuItemsPlistReader: MenuItemsReader {
-//    
-//    /**
-//    A string object that contains the name of the plist file
-//    to read menu items metadata from.
-//    */
-//    var plistToReadFrom: String?
-//    
-//    func readMenuItems() -> [[String : String]]? {
-//        let filePath = NSBundle.mainBundle().pathForResource(plistToReadFrom, ofType: "plist")
-//        return NSArray(contentsOfFile: filePath) as [[String : String]]
-//    }
-//    
-//    func readMenuItems() -> ([[String : String]]?, NSError?) {
-//        return ([], nil)
-//    }
-//}
-//
-//describe(@"MDMenuPlistReader", ^{
-//    MDMenuPlistReader __block *menuPlistReader = nil;
-//    NSString __block *testPlistToReadFrom = nil;
-//    
-//    beforeEach(^{
-//        menuPlistReader = [[MDMenuPlistReader alloc] init];
-//        testPlistToReadFrom = @"testMenuItems.plist";
-//        menuPlistReader.plistToReadFrom = testPlistToReadFrom;
-//        });
-//    
-//    it(@"conforms to MDMenuReader protocol", ^{
-//        [[menuPlistReader should] conformToProtocol:@protocol(MDMenuReader)];
-//    });
-//    
-//    it(@"reads given file's full path in app bundle", ^{
-//    id mockNSBundle = [NSBundle nullMock];
-//    [NSBundle stub:@selector(mainBundle)
-//    andReturn:mockNSBundle];
-//    
-//    [[[mockNSBundle should] receive] pathForResource:testPlistToReadFrom
-//    ofType:@"plist"];
-//    [menuPlistReader readMenuItems];
-//    });
-//    
-//    it(@"creates and returns an array of menu items from given plist", ^{
-//    id mockNSBundle = [NSBundle nullMock];
-//    [NSBundle stub:@selector(mainBundle)
-//    andReturn:mockNSBundle];
-//    
-//    NSString *testPlistFilePath = @"/path/to/testMenuItems.plist";
-//    [mockNSBundle stub:@selector(pathForResource:ofType:)
-//    andReturn:testPlistFilePath];
-//    
-//    NSDictionary *testMenuItem = @{ @"title": @"Test Menu Item" };
-//    NSArray *expectedRawMenuItemsArray = @[testMenuItem];
-//    
-//    [[NSArray should] receive:@selector(arrayWithContentsOfFile:)
-//    andReturn:expectedRawMenuItemsArray
-//    withArguments:testPlistFilePath];
-//    
-//    [[[menuPlistReader readMenuItems] should] equal:expectedRawMenuItemsArray];
-//    });
-//});

@@ -36,7 +36,7 @@ class MenuViewController: UIViewController {
     // MARK: - Notification handling
     
     func didSelectMenuItemNotification(notification: NSNotification) {
-        let menuItem: MenuItem = notification.object as MenuItem
+        var menuItem: MenuItem? = notification.object as? MenuItem
         
 //        if let tapHandler = MenuTapHandlerBuilder.handlerForMenuItem(menuItem) {
 //            slideInTopViewController(tapHandler)

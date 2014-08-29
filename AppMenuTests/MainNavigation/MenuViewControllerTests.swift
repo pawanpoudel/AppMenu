@@ -24,11 +24,10 @@ class MenuViewControllerTests: XCTestCase {
         menuViewController = MenuViewController()
         menuViewController?.dataSource = dataSource
         menuViewController?.tableView = tableView
-
-        objc_removeAssociatedObjects(menuViewController)
     }
 
     override func tearDown() {
+        super.tearDown()
         objc_removeAssociatedObjects(menuViewController)
     }
     
@@ -66,13 +65,27 @@ class MenuViewControllerTests: XCTestCase {
             "Menu view controller listens to notification when it's view is visible")
     }
     
+    func testRemovesItselfAsListenerForMenuItemTappedNotificationInViewDidDisappear() {
+        swizzleNotificationHandler()
+        
+        menuViewController?.viewDidAppear(false)
+        menuViewController?.viewDidDisappear(false)
+        
+        NSNotificationCenter.defaultCenter()
+            .postNotificationName(MenuTableDataSourceDidSelectItemNotification,
+                object: nil)
+        
+        XCTAssertNil(objc_getAssociatedObject(menuViewController, postedNotification),
+            "Menu view controller removes iteself as listener for notification when view is not visible anymore")
+    }
+    
     // Mark: - Method swizzling
     
     func swizzleNotificationHandler() {
         var realMethod: Method = class_getInstanceMethod(object_getClass(menuViewController),
-            Selector.convertFromStringLiteral("didSelectMenuItemNotification"))
+            Selector.convertFromStringLiteral("didSelectMenuItemNotification:"))
         
-        var testMethod: Method = class_getInstanceMethod(object_getClass(menuViewController), Selector.convertFromStringLiteral("testImpl_didSelectMenuItemNotification"))
+        var testMethod: Method = class_getInstanceMethod(object_getClass(menuViewController), Selector.convertFromStringLiteral("testImpl_didSelectMenuItemNotification:"))
         
         method_exchangeImplementations(realMethod, testMethod)
     }
@@ -81,9 +94,8 @@ class MenuViewControllerTests: XCTestCase {
 extension MenuViewController {
     func testImpl_didSelectMenuItemNotification(notification: NSNotification) {
         objc_setAssociatedObject(self,
-            postedNotification,
-            notification,
-            UInt(OBJC_ASSOCIATION_RETAIN))
+                                 postedNotification,
+                                 notification,
+                                 UInt(OBJC_ASSOCIATION_RETAIN))
     }
 }
-

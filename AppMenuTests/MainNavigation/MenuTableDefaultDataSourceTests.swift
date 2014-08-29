@@ -82,7 +82,7 @@ class MenuTableDefaultDataSourceTests: XCTestCase {
         let firstMenuItem = NSIndexPath(forRow: 0, inSection: 0)
         let cell = dataSource!.tableView(nil, cellForRowAtIndexPath: firstMenuItem)
         
-        XCTAssertEqual(cell.textLabel.text, "Test menu item",
+        XCTAssertEqual(cell.textLabel.text!	, "Test menu item",
             "A cell contains the title of a menu item it's representing")
     }
 }

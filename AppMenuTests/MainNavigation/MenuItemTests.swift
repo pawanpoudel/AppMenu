@@ -33,6 +33,12 @@ class MenuItemTests: XCTestCase {
         XCTAssertEqual(menuItem!.iconName!, "contributionsIcon",
             "Icon name should be what we assigned")
     }
+    
+    func testThatMenuItemCanBeAssignedAFeatureName() {
+        menuItem!.featureName = "someFeature"
+        XCTAssertEqual(menuItem!.featureName!, "someFeature",
+            "Feature name should be what we assigned")
+    }
 }
 
 

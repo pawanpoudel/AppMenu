@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154389B219B2383000C85148 /* menuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154389B119B2383000C85148 /* menuItems.plist */; };
+		154389B319B2391000C85148 /* menuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154389B119B2383000C85148 /* menuItems.plist */; };
 		1562FF9619A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */; };
 		1562FF9A19A126CE00CA6FBE /* MenuItemsPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */; };
 		1562FF9D19A127CF00CA6FBE /* MenuItemsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */; };
 		158713A619A244A900379918 /* MenuItemsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */; };
 		158713A719A244A900379918 /* MenuItemsPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */; };
-		1589350D19A6BF2400C6AFAD /* testMenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1589350C19A6BF2400C6AFAD /* testMenuItems.plist */; };
 		1594C5C019AC267A005EB820 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594C5BF19AC267A005EB820 /* MenuViewControllerTests.swift */; };
 		1594C5C319AC28EB005EB820 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594C5C119AC28EB005EB820 /* MenuViewController.swift */; };
 		1594C5C419AC28EB005EB820 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594C5C119AC28EB005EB820 /* MenuViewController.swift */; };
@@ -47,10 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		154389B119B2383000C85148 /* menuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuItems.plist; sourceTree = "<group>"; };
 		1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReaderTests.swift; sourceTree = "<group>"; };
 		1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReader.swift; sourceTree = "<group>"; };
 		1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsReader.swift; sourceTree = "<group>"; };
-		1589350C19A6BF2400C6AFAD /* testMenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testMenuItems.plist; sourceTree = "<group>"; };
 		1589350E19A6CB5100C6AFAD /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		1594C5BF19AC267A005EB820 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
 		1594C5C119AC28EB005EB820 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 				15E7370B19AA8DE5005AFD72 /* MenuTableDefaultDataSource.swift */,
 				1594C5C119AC28EB005EB820 /* MenuViewController.swift */,
 				1594C5C219AC28EB005EB820 /* MenuViewController.xib */,
+				154389B119B2383000C85148 /* menuItems.plist */,
 			);
 			path = MainNavigation;
 			sourceTree = "<group>";
@@ -110,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */,
-				1589350C19A6BF2400C6AFAD /* testMenuItems.plist */,
 				15E736F819A97948005AFD72 /* MenuItemTests.swift */,
 				15E736FF19AA3CB0005AFD72 /* MenuItemBuilderTests.swift */,
 				15E7370119AA46AF005AFD72 /* FakeMenuItemsReader.swift */,
@@ -267,6 +268,7 @@
 			files = (
 				15A98AF619A03986007FB1EA /* Images.xcassets in Resources */,
 				1594C5C519AC28EB005EB820 /* MenuViewController.xib in Resources */,
+				154389B219B2383000C85148 /* menuItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1589350D19A6BF2400C6AFAD /* testMenuItems.plist in Resources */,
+				154389B319B2391000C85148 /* menuItems.plist in Resources */,
 				1594C5C619AC28EB005EB820 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

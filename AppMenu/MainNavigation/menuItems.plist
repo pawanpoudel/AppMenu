@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Contributions</string>
+		<key>subTitle</key>
+		<string>Repos contributed to</string>
+		<key>iconName</key>
+		<string>iconContributions</string>
+		<key>featureName</key>
+		<string>contributions</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Repositories</string>
+		<key>subTitle</key>
+		<string>Repos collaborating</string>
+		<key>iconName</key>
+		<string>iconRepositories</string>
+		<key>featureName</key>
+		<string>repositories</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Public Activity</string>
+		<key>subTitle</key>
+		<string>Activity viewable by anyone</string>
+		<key>iconName</key>
+		<string>iconPublicActivity</string>
+		<key>featureName</key>
+		<string>publicActivity</string>
+	</dict>
+</array>
+</plist>

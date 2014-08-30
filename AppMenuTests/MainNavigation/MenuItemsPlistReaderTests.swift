@@ -42,25 +42,33 @@ class MenuItemsPlistReaderTests: XCTestCase {
     }
     
     func testPlistIsDeserializedCorrectly() {
-        plistReader!.plistToReadFrom = "testMenuItems"
+        plistReader!.plistToReadFrom = "menuItems"
         (metadata, error) = plistReader!.readMenuItems()
         
-        XCTAssertTrue(metadata?.count == 2, "There should only be two dictionaries in plist")
+        XCTAssertTrue(metadata?.count == 3, "There should only be three dictionaries in plist")
         
         let firstRow = metadata?[0]
-        XCTAssertEqual(firstRow!["title"]!, "Test row 1",
+        XCTAssertEqual(firstRow!["title"]!, "Contributions",
             "First row's title should be what's in plist")
-        XCTAssertEqual(firstRow!["subTitle"]!, "Test row 1 subtitle",
+        XCTAssertEqual(firstRow!["subTitle"]!, "Repos contributed to",
             "First row's subtitle should be what's in plist")
-        XCTAssertEqual(firstRow!["iconName"]!, "iconName1",
+        XCTAssertEqual(firstRow!["iconName"]!, "iconContributions",
             "First row's icon name should be what's in plist")
         
         let secondRow = metadata?[1]
-        XCTAssertEqual(secondRow!["title"]!, "Test row 2",
+        XCTAssertEqual(secondRow!["title"]!, "Repositories",
             "Second row's title should be what's in plist")
-        XCTAssertEqual(secondRow!["subTitle"]!, "Test row 2 subtitle",
+        XCTAssertEqual(secondRow!["subTitle"]!, "Repos collaborating",
             "Second row's subtitle should be what's in plist")
-        XCTAssertEqual(secondRow!["iconName"]!, "iconName2",
+        XCTAssertEqual(secondRow!["iconName"]!, "iconRepositories",
             "Second row's icon name should be what's in plist")
+        
+        let thirdRow = metadata?[2]
+        XCTAssertEqual(thirdRow!["title"]!, "Public Activity",
+            "Third row's title should be what's in plist")
+        XCTAssertEqual(thirdRow!["subTitle"]!, "Activity viewable by anyone",
+            "Third row's subtitle should be what's in plist")
+        XCTAssertEqual(thirdRow!["iconName"]!, "iconPublicActivity",
+            "Third row's icon name should be what's in plist")
     }
 }

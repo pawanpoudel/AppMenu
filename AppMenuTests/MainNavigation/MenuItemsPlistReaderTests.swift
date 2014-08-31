@@ -16,7 +16,6 @@ class MenuItemsPlistReaderTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
         plistReader = MenuItemsPlistReader()
         plistReader?.plistToReadFrom = "notFound"
         (metadata, error) = plistReader!.readMenuItems()
@@ -54,6 +53,8 @@ class MenuItemsPlistReaderTests: XCTestCase {
             "First row's subtitle should be what's in plist")
         XCTAssertEqual(firstRow!["iconName"]!, "iconContributions",
             "First row's icon name should be what's in plist")
+        XCTAssertEqual(firstRow!["tapHandlerName"]!, "ContributionsViewController",
+            "First row's tap handler should be what's in plist")
         
         let secondRow = metadata?[1]
         XCTAssertEqual(secondRow!["title"]!, "Repositories",
@@ -62,6 +63,8 @@ class MenuItemsPlistReaderTests: XCTestCase {
             "Second row's subtitle should be what's in plist")
         XCTAssertEqual(secondRow!["iconName"]!, "iconRepositories",
             "Second row's icon name should be what's in plist")
+        XCTAssertEqual(secondRow!["tapHandlerName"]!, "RepositoriesViewController",
+            "Second row's tap handler should be what's in plist")
         
         let thirdRow = metadata?[2]
         XCTAssertEqual(thirdRow!["title"]!, "Public Activity",
@@ -70,5 +73,7 @@ class MenuItemsPlistReaderTests: XCTestCase {
             "Third row's subtitle should be what's in plist")
         XCTAssertEqual(thirdRow!["iconName"]!, "iconPublicActivity",
             "Third row's icon name should be what's in plist")
+        XCTAssertEqual(thirdRow!["tapHandlerName"]!, "PublicActivityViewController",
+            "Third row's tap handler should be what's in plist")
     }
 }

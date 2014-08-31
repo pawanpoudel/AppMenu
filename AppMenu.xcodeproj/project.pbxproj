@@ -9,6 +9,24 @@
 /* Begin PBXBuildFile section */
 		154389B219B2383000C85148 /* menuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154389B119B2383000C85148 /* menuItems.plist */; };
 		154389B319B2391000C85148 /* menuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154389B119B2383000C85148 /* menuItems.plist */; };
+		154389B719B247AF00C85148 /* ContributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389B519B247AF00C85148 /* ContributionsViewController.swift */; };
+		154389B819B247AF00C85148 /* ContributionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154389B619B247AF00C85148 /* ContributionsViewController.xib */; };
+		154389B919B298F900C85148 /* ContributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389B519B247AF00C85148 /* ContributionsViewController.swift */; };
+		154389BC19B299B200C85148 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389BA19B299B200C85148 /* RepositoriesViewController.swift */; };
+		154389BD19B299B200C85148 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389BA19B299B200C85148 /* RepositoriesViewController.swift */; };
+		154389BE19B299B200C85148 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154389BB19B299B200C85148 /* RepositoriesViewController.xib */; };
+		154389BF19B299B200C85148 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154389BB19B299B200C85148 /* RepositoriesViewController.xib */; };
+		154389C219B29A4500C85148 /* PublicActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389C019B29A4500C85148 /* PublicActivityViewController.swift */; };
+		154389C319B29A4500C85148 /* PublicActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389C019B29A4500C85148 /* PublicActivityViewController.swift */; };
+		154389C419B29A4500C85148 /* PublicActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154389C119B29A4500C85148 /* PublicActivityViewController.xib */; };
+		154389C519B29A4500C85148 /* PublicActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154389C119B29A4500C85148 /* PublicActivityViewController.xib */; };
+		154389C719B2A73800C85148 /* AppMenuManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389C619B2A73800C85148 /* AppMenuManagerTests.swift */; };
+		154389C919B2A75E00C85148 /* AppMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389C819B2A75E00C85148 /* AppMenuManager.swift */; };
+		154389CA19B2A75E00C85148 /* AppMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389C819B2A75E00C85148 /* AppMenuManager.swift */; };
+		154389CC19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */; };
+		154389CD19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */; };
+		154389CF19B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */; };
+		154389D019B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */; };
 		1562FF9619A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */; };
 		1562FF9A19A126CE00CA6FBE /* MenuItemsPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */; };
 		1562FF9D19A127CF00CA6FBE /* MenuItemsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */; };
@@ -26,7 +44,7 @@
 		15E736F919A97948005AFD72 /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E736F819A97948005AFD72 /* MenuItemTests.swift */; };
 		15E736FB19A98B29005AFD72 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E736FA19A98B29005AFD72 /* MenuItem.swift */; };
 		15E736FC19A98DF2005AFD72 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E736FA19A98B29005AFD72 /* MenuItem.swift */; };
-		15E7370019AA3CB0005AFD72 /* MenuItemBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E736FF19AA3CB0005AFD72 /* MenuItemBuilderTests.swift */; };
+		15E7370019AA3CB0005AFD72 /* MenuItemDefaultBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E736FF19AA3CB0005AFD72 /* MenuItemDefaultBuilderTests.swift */; };
 		15E7370219AA46AF005AFD72 /* FakeMenuItemsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7370119AA46AF005AFD72 /* FakeMenuItemsReader.swift */; };
 		15E7370419AA4E90005AFD72 /* MenuItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7370319AA4E90005AFD72 /* MenuItemBuilder.swift */; };
 		15E7370519AA5214005AFD72 /* MenuItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7370319AA4E90005AFD72 /* MenuItemBuilder.swift */; };
@@ -49,6 +67,16 @@
 
 /* Begin PBXFileReference section */
 		154389B119B2383000C85148 /* menuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuItems.plist; sourceTree = "<group>"; };
+		154389B519B247AF00C85148 /* ContributionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionsViewController.swift; sourceTree = "<group>"; };
+		154389B619B247AF00C85148 /* ContributionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContributionsViewController.xib; sourceTree = "<group>"; };
+		154389BA19B299B200C85148 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		154389BB19B299B200C85148 /* RepositoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		154389C019B29A4500C85148 /* PublicActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicActivityViewController.swift; sourceTree = "<group>"; };
+		154389C119B29A4500C85148 /* PublicActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicActivityViewController.xib; sourceTree = "<group>"; };
+		154389C619B2A73800C85148 /* AppMenuManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMenuManagerTests.swift; sourceTree = "<group>"; };
+		154389C819B2A75E00C85148 /* AppMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMenuManager.swift; sourceTree = "<group>"; };
+		154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMenuItemBuilder.swift; sourceTree = "<group>"; };
+		154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemDefaultBuilder.swift; sourceTree = "<group>"; };
 		1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReaderTests.swift; sourceTree = "<group>"; };
 		1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReader.swift; sourceTree = "<group>"; };
 		1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsReader.swift; sourceTree = "<group>"; };
@@ -66,7 +94,7 @@
 		15A98AF419A03986007FB1EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15E736F819A97948005AFD72 /* MenuItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
 		15E736FA19A98B29005AFD72 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		15E736FF19AA3CB0005AFD72 /* MenuItemBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemBuilderTests.swift; sourceTree = "<group>"; };
+		15E736FF19AA3CB0005AFD72 /* MenuItemDefaultBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemDefaultBuilderTests.swift; sourceTree = "<group>"; };
 		15E7370119AA46AF005AFD72 /* FakeMenuItemsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMenuItemsReader.swift; sourceTree = "<group>"; };
 		15E7370319AA4E90005AFD72 /* MenuItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemBuilder.swift; sourceTree = "<group>"; };
 		15E7370619AA8A73005AFD72 /* MenuTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableDataSource.swift; sourceTree = "<group>"; };
@@ -92,18 +120,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154389B419B2479D00C85148 /* TapHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				154389B519B247AF00C85148 /* ContributionsViewController.swift */,
+				154389B619B247AF00C85148 /* ContributionsViewController.xib */,
+				154389BA19B299B200C85148 /* RepositoriesViewController.swift */,
+				154389BB19B299B200C85148 /* RepositoriesViewController.xib */,
+				154389C019B29A4500C85148 /* PublicActivityViewController.swift */,
+				154389C119B29A4500C85148 /* PublicActivityViewController.xib */,
+			);
+			path = TapHandlers;
+			sourceTree = "<group>";
+		};
 		1562FF8F19A1103300CA6FBE /* MainNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				154389C819B2A75E00C85148 /* AppMenuManager.swift */,
 				1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */,
 				1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */,
 				15E736FA19A98B29005AFD72 /* MenuItem.swift */,
 				15E7370319AA4E90005AFD72 /* MenuItemBuilder.swift */,
+				154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */,
 				15E7370619AA8A73005AFD72 /* MenuTableDataSource.swift */,
 				15E7370B19AA8DE5005AFD72 /* MenuTableDefaultDataSource.swift */,
 				1594C5C119AC28EB005EB820 /* MenuViewController.swift */,
 				1594C5C219AC28EB005EB820 /* MenuViewController.xib */,
 				154389B119B2383000C85148 /* menuItems.plist */,
+				154389B419B2479D00C85148 /* TapHandlers */,
 			);
 			path = MainNavigation;
 			sourceTree = "<group>";
@@ -113,11 +157,13 @@
 			children = (
 				1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */,
 				15E736F819A97948005AFD72 /* MenuItemTests.swift */,
-				15E736FF19AA3CB0005AFD72 /* MenuItemBuilderTests.swift */,
+				15E736FF19AA3CB0005AFD72 /* MenuItemDefaultBuilderTests.swift */,
 				15E7370119AA46AF005AFD72 /* FakeMenuItemsReader.swift */,
+				154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */,
 				15E7370919AA8BB6005AFD72 /* MenuTableDefaultDataSourceTests.swift */,
 				1594C5BF19AC267A005EB820 /* MenuViewControllerTests.swift */,
 				1594C5C719AC2C6F005EB820 /* MenuTableFakeDataSource.swift */,
+				154389C619B2A73800C85148 /* AppMenuManagerTests.swift */,
 			);
 			path = MainNavigation;
 			sourceTree = "<group>";
@@ -268,6 +314,9 @@
 			files = (
 				15A98AF619A03986007FB1EA /* Images.xcassets in Resources */,
 				1594C5C519AC28EB005EB820 /* MenuViewController.xib in Resources */,
+				154389BE19B299B200C85148 /* RepositoriesViewController.xib in Resources */,
+				154389B819B247AF00C85148 /* ContributionsViewController.xib in Resources */,
+				154389C419B29A4500C85148 /* PublicActivityViewController.xib in Resources */,
 				154389B219B2383000C85148 /* menuItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,8 +325,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154389C519B29A4500C85148 /* PublicActivityViewController.xib in Resources */,
 				154389B319B2391000C85148 /* menuItems.plist in Resources */,
 				1594C5C619AC28EB005EB820 /* MenuViewController.xib in Resources */,
+				154389BF19B299B200C85148 /* RepositoriesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154389BC19B299B200C85148 /* RepositoriesViewController.swift in Sources */,
+				154389C919B2A75E00C85148 /* AppMenuManager.swift in Sources */,
+				154389B719B247AF00C85148 /* ContributionsViewController.swift in Sources */,
 				15E7370C19AA8DE5005AFD72 /* MenuTableDefaultDataSource.swift in Sources */,
+				154389CF19B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */,
+				154389CC19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */,
 				15A98AF719A03986007FB1EA /* ViewController.swift in Sources */,
+				154389C219B29A4500C85148 /* PublicActivityViewController.swift in Sources */,
 				15E7370419AA4E90005AFD72 /* MenuItemBuilder.swift in Sources */,
 				15A98AF519A03986007FB1EA /* AppDelegate.swift in Sources */,
 				1594C5C319AC28EB005EB820 /* MenuViewController.swift in Sources */,
@@ -304,18 +361,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154389C719B2A73800C85148 /* AppMenuManagerTests.swift in Sources */,
+				154389B919B298F900C85148 /* ContributionsViewController.swift in Sources */,
 				15E7370A19AA8BB6005AFD72 /* MenuTableDefaultDataSourceTests.swift in Sources */,
 				15E7370519AA5214005AFD72 /* MenuItemBuilder.swift in Sources */,
+				154389C319B29A4500C85148 /* PublicActivityViewController.swift in Sources */,
 				15E736FC19A98DF2005AFD72 /* MenuItem.swift in Sources */,
+				154389BD19B299B200C85148 /* RepositoriesViewController.swift in Sources */,
 				1594C5C019AC267A005EB820 /* MenuViewControllerTests.swift in Sources */,
 				15E736F919A97948005AFD72 /* MenuItemTests.swift in Sources */,
 				158713A619A244A900379918 /* MenuItemsReader.swift in Sources */,
-				15E7370019AA3CB0005AFD72 /* MenuItemBuilderTests.swift in Sources */,
+				154389D019B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */,
+				154389CD19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */,
+				15E7370019AA3CB0005AFD72 /* MenuItemDefaultBuilderTests.swift in Sources */,
 				1594C5C819AC2C6F005EB820 /* MenuTableFakeDataSource.swift in Sources */,
 				1594C5C419AC28EB005EB820 /* MenuViewController.swift in Sources */,
 				158713A719A244A900379918 /* MenuItemsPlistReader.swift in Sources */,
 				15E7370819AA8A73005AFD72 /* MenuTableDataSource.swift in Sources */,
 				15E7370D19AA8DE5005AFD72 /* MenuTableDefaultDataSource.swift in Sources */,
+				154389CA19B2A75E00C85148 /* AppMenuManager.swift in Sources */,
 				15E7370219AA46AF005AFD72 /* FakeMenuItemsReader.swift in Sources */,
 				1562FF9619A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift in Sources */,
 			);

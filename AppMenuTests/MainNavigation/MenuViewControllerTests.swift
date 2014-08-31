@@ -15,6 +15,7 @@ class MenuViewControllerTests: XCTestCase {
     var menuViewController: MenuViewController?
     var dataSource: MenuTableDataSource?
     var tableView: UITableView?
+    var navController: UINavigationController?
     
     override func setUp() {
         super.setUp()
@@ -24,6 +25,8 @@ class MenuViewControllerTests: XCTestCase {
         menuViewController = MenuViewController()
         menuViewController?.dataSource = dataSource
         menuViewController?.tableView = tableView
+        
+        navController = UINavigationController(rootViewController: menuViewController)
     }
 
     override func tearDown() {
@@ -77,6 +80,44 @@ class MenuViewControllerTests: XCTestCase {
         
         XCTAssertNil(objc_getAssociatedObject(menuViewController, postedNotification),
             "Menu view controller removes iteself as listener for notification when view is not visible anymore")
+    }
+    
+    // TODO: Write tests for each tap handler
+    
+    func testCorrectViewIsDisplayedWhenContributionsMenuItemIsTapped() {
+        let menuItem = MenuItem(title: "Contributions")
+        menuItem.tapHandlerName = "ContributionsViewController"
+        
+        let notification = NSNotification(name: MenuTableDataSourceDidSelectItemNotification, object: menuItem)
+        menuViewController?.didSelectMenuItemNotification(notification)
+        let topViewController = navController?.topViewController
+        
+        XCTAssertTrue(topViewController!.isKindOfClass(ContributionsViewController),
+            "Contributions view is displayed for Contributions menu item")
+    }
+    
+    func testCorrectViewIsDisplayedWhenRepositoriesMenuItemIsTapped() {
+        let menuItem = MenuItem(title: "Repositories")
+        menuItem.tapHandlerName = "RepositoriesViewController"
+        
+        let notification = NSNotification(name: MenuTableDataSourceDidSelectItemNotification, object: menuItem)
+        menuViewController?.didSelectMenuItemNotification(notification)
+        let topViewController = navController?.topViewController
+        
+        XCTAssertTrue(topViewController!.isKindOfClass(RepositoriesViewController),
+            "Repositories view is displayed for Contributions menu item")
+    }
+    
+    func testCorrectViewIsDisplayedWhenPublicActivityMenuItemIsTapped() {
+        let menuItem = MenuItem(title: "PublicActivity")
+        menuItem.tapHandlerName = "PublicActivityViewController"
+        
+        let notification = NSNotification(name: MenuTableDataSourceDidSelectItemNotification, object: menuItem)
+        menuViewController?.didSelectMenuItemNotification(notification)
+        let topViewController = navController?.topViewController
+        
+        XCTAssertTrue(topViewController!.isKindOfClass(PublicActivityViewController),
+            "Public activity view is displayed for Contributions menu item")
     }
     
     // Mark: - Method swizzling

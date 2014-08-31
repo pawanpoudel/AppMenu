@@ -9,8 +9,8 @@
 import UIKit
 import XCTest
 
-class MenuItemBuilderTests: XCTestCase {
-    var menuItemBuilder: MenuItemBuilder?
+class MenuItemDefaultBuilderTests: XCTestCase {
+    var menuItemBuilder: MenuItemDefaultBuilder?
     var fakeMenuItemsReader: FakeMenuItemsReader?
     var menuItems: [MenuItem]?
     var error: NSError?
@@ -20,19 +20,19 @@ class MenuItemBuilderTests: XCTestCase {
         fakeMenuItemsReader!.missingTitle = true
         let (metadata, _) = fakeMenuItemsReader!.readMenuItems()
         
-        menuItemBuilder = MenuItemBuilder()
+        menuItemBuilder = MenuItemDefaultBuilder()
         (menuItems, error) = menuItemBuilder!.buildMenuItemsFromMetadata(metadata!)
     }
     
     func testCorrectErrorDomainIsReturnedWhenTitleIsMissing() {
         let errorDomain = error?.domain
-        XCTAssertEqual(errorDomain!, MenuItemBuilderErrorDomain,
+        XCTAssertEqual(errorDomain!, MenuItemDefaultBuilderErrorDomain,
             "Correct error domain is returned")
     }
     
     func testMissingTitleErrorCodeIsReturnedWhenTitleIsMissing() {
         let errorCode = error?.code
-        XCTAssertEqual(errorCode!, MenuItemBuilderErrorCode.MissingTitle.toRaw(),
+        XCTAssertEqual(errorCode!, MenuItemDefaultBuilderErrorCode.MissingTitle.toRaw(),
             "Correct error code is returned")
     }
     
@@ -70,6 +70,8 @@ class MenuItemBuilderTests: XCTestCase {
             "First menu item's subTitle should be what's in the first dictionary")
         XCTAssertEqual(menuItem1.iconName!, rawDictionary1["iconName"]!,
             "First menu item's icon name should be what's in the first dictionary")
+        XCTAssertEqual(menuItem1.tapHandlerName!, rawDictionary1["tapHandlerName"]!,
+            "First menu item's tap handler should be what's in the first dictionary")
         
         let rawDictionary2 = metadata![1]
         let menuItem2 = menuItems![1]
@@ -79,5 +81,7 @@ class MenuItemBuilderTests: XCTestCase {
             "Second menu item's subTitle should be what's in the second dictionary")
         XCTAssertEqual(menuItem2.iconName!, rawDictionary2["iconName"]!,
             "Second menu item's icon name should be what's in the second dictionary")
+        XCTAssertEqual(menuItem2.tapHandlerName!, rawDictionary2["tapHandlerName"]!,
+            "Second menu item's tap handler should be what's in the second dictionary")
     }
 }

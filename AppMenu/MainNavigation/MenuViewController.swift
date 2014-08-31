@@ -35,21 +35,29 @@ class MenuViewController: UIViewController {
     
     // MARK: - Notification handling
     
-    func didSelectMenuItemNotification(notification: NSNotification) {
-        var menuItem: MenuItem? = notification.object as? MenuItem
+    func didSelectMenuItemNotification(notification: NSNotification?) {
+        var menuItem: MenuItem? = notification!.object as? MenuItem
         
-        
-        
-//        if let tapHandler = MenuTapHandlerBuilder.handlerForMenuItem(menuItem) {
-//            slideInTopViewController(tapHandler)
-//        }
+        if menuItem != nil {
+            var tapHandler: UIViewController?
+            
+            switch menuItem!.tapHandlerName! {
+                case "ContributionsViewController":
+                tapHandler = ContributionsViewController()
+                
+                case "RepositoriesViewController":
+                tapHandler = RepositoriesViewController()
+                
+                case "PublicActivityViewController":
+                tapHandler = PublicActivityViewController()
+                
+                default:
+                tapHandler = nil
+            }
+            
+            if tapHandler != nil {
+                self.navigationController.pushViewController(tapHandler, animated: true)
+            }
+        }
     }
-    
-//    func slideInTopViewController(topViewController: UIViewController) {
-//        // First enable swiping on the top view
-//        topViewController.view.addGestureRecognizer(slidingViewController().panGesture)
-//        
-//        slidingViewController().topViewController = UINavigationController(rootViewController: topViewController)
-//        slidingViewController().resetTopViewAnimated(true)
-//    }
 }

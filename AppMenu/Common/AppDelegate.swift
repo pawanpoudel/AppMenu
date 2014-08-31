@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: NSDictionary!)
                      -> Bool
     {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let navController = UINavigationController(rootViewController: MenuViewController())
+        window!.rootViewController = navController
+        
+        window!.makeKeyAndVisible()
         return true
     }
 }

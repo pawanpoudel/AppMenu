@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class AppMenuManager {
-    var menuItemsReader: MenuItemsReader?
-    var menuItemBuilder: MenuItemBuilder?
+    var menuItemsReader: MenuItemsReader? = nil
+    var menuItemBuilder: MenuItemBuilder? = nil
     
     func menuViewController() -> MenuViewController? {
         let (metadata, metadataError) = menuItemsReader!.readMenuItems()
@@ -43,19 +43,17 @@ class AppMenuManager {
         
         if builderError != nil {
             tellUserAboutError(builderError!)
+            return nil
         }
-        else {
-            return menuItems
-        }
-        
-        return nil
+
+        return menuItems
     }
     
     private func menuViewControllerFromMenuItems(menuItems: [MenuItem]) -> MenuViewController {
         let dataSource = MenuTableDefaultDataSource()
         dataSource.menuItems = menuItems
         
-        let menuViewController = MenuViewController()
+        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
         menuViewController.dataSource = dataSource
         
         return menuViewController

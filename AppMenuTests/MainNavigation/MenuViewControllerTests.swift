@@ -92,6 +92,8 @@ class MenuViewControllerTests: XCTestCase {
         menuViewController?.didSelectMenuItemNotification(notification)
         let topViewController = navController?.topViewController
         
+        println("topViewController: \(topViewController!.isKindOfClass(ContributionsViewController))")
+        
         XCTAssertTrue(topViewController!.isKindOfClass(ContributionsViewController),
             "Contributions view is displayed for Contributions menu item")
     }

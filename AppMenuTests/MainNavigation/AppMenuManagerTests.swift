@@ -50,7 +50,7 @@ class AppMenuManagerTests: XCTestCase {
     }
     
     func testCreatesMenuViewControllerIfMenuItemsAvailable() {
-        fakeMenuItemsReader?.missingTitle = false
+        fakeMenuItemBuilder?.menuItemsToReturn = fakeMenuItems()
         menuViewController = menuManager?.menuViewController()
         
         XCTAssertNotNil(menuViewController,
@@ -67,5 +67,10 @@ class AppMenuManagerTests: XCTestCase {
         return NSError(domain: "Fake Error domain",
                        code: 0,
                        userInfo: userInfo)
+    }
+    
+    func fakeMenuItems() -> [MenuItem] {
+        let menuItem = MenuItem(title: "Fake menu item")
+        return [menuItem]
     }
 }

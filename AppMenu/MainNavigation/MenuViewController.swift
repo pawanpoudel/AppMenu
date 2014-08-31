@@ -10,10 +10,15 @@ import UIKit
 
 class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     var dataSource: MenuTableDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("tableView: \(tableView)")
+        println("dataSource: \(dataSource)")
+        
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
     }

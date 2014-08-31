@@ -10,7 +10,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
     var window: UIWindow?
 
     func application(application: UIApplication!,
@@ -18,10 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      -> Bool
     {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let navController = UINavigationController(rootViewController: MenuViewController())
-        window!.rootViewController = navController
         
-        window!.makeKeyAndVisible()
+        let menuItemsPlistReader = MenuItemsPlistReader()
+        menuItemsPlistReader.plistToReadFrom = "menuItems"
+        
+        let appMenuManager = AppMenuManager()
+        appMenuManager.menuItemsReader = menuItemsPlistReader
+        appMenuManager.menuItemBuilder = MenuItemDefaultBuilder()
+        
+        if let menuViewController = appMenuManager.menuViewController() {
+            let navController = UINavigationController(rootViewController: menuViewController)
+            window!.rootViewController = navController
+        }
+        
+        window!.makeKeyAndVisible()        
         return true
     }
 }

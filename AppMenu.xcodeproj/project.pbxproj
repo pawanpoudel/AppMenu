@@ -27,6 +27,8 @@
 		154389CD19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */; };
 		154389CF19B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */; };
 		154389D019B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */; };
+		15438A5C19B4D59800C85148 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15438A5B19B4D59800C85148 /* FeatureViewController.swift */; };
+		15438A5D19B4D59800C85148 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15438A5B19B4D59800C85148 /* FeatureViewController.swift */; };
 		1562FF9619A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */; };
 		1562FF9A19A126CE00CA6FBE /* MenuItemsPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */; };
 		1562FF9D19A127CF00CA6FBE /* MenuItemsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */; };
@@ -77,6 +79,7 @@
 		154389C819B2A75E00C85148 /* AppMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMenuManager.swift; sourceTree = "<group>"; };
 		154389CB19B2B55E00C85148 /* FakeMenuItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMenuItemBuilder.swift; sourceTree = "<group>"; };
 		154389CE19B2B63700C85148 /* MenuItemDefaultBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemDefaultBuilder.swift; sourceTree = "<group>"; };
+		15438A5B19B4D59800C85148 /* FeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
 		1562FF9519A1104D00CA6FBE /* MenuItemsPlistReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReaderTests.swift; sourceTree = "<group>"; };
 		1562FF9919A126CE00CA6FBE /* MenuItemsPlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsPlistReader.swift; sourceTree = "<group>"; };
 		1562FF9C19A127CF00CA6FBE /* MenuItemsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsReader.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		154389B419B2479D00C85148 /* TapHandlers */ = {
 			isa = PBXGroup;
 			children = (
+				15438A5B19B4D59800C85148 /* FeatureViewController.swift */,
 				154389B519B247AF00C85148 /* ContributionsViewController.swift */,
 				154389B619B247AF00C85148 /* ContributionsViewController.xib */,
 				154389BA19B299B200C85148 /* RepositoriesViewController.swift */,
@@ -340,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154389BC19B299B200C85148 /* RepositoriesViewController.swift in Sources */,
+				15438A5C19B4D59800C85148 /* FeatureViewController.swift in Sources */,
 				154389C919B2A75E00C85148 /* AppMenuManager.swift in Sources */,
 				154389B719B247AF00C85148 /* ContributionsViewController.swift in Sources */,
 				15E7370C19AA8DE5005AFD72 /* MenuTableDefaultDataSource.swift in Sources */,
@@ -370,6 +375,7 @@
 				154389BD19B299B200C85148 /* RepositoriesViewController.swift in Sources */,
 				1594C5C019AC267A005EB820 /* MenuViewControllerTests.swift in Sources */,
 				15E736F919A97948005AFD72 /* MenuItemTests.swift in Sources */,
+				15438A5D19B4D59800C85148 /* FeatureViewController.swift in Sources */,
 				158713A619A244A900379918 /* MenuItemsReader.swift in Sources */,
 				154389D019B2B63700C85148 /* MenuItemDefaultBuilder.swift in Sources */,
 				154389CD19B2B55E00C85148 /* FakeMenuItemBuilder.swift in Sources */,

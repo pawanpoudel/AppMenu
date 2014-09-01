@@ -70,8 +70,8 @@ class MenuItemDefaultBuilderTests: XCTestCase {
             "First menu item's subTitle should be what's in the first dictionary")
         XCTAssertEqual(menuItem1.iconName!, rawDictionary1["iconName"]!,
             "First menu item's icon name should be what's in the first dictionary")
-        XCTAssertEqual(menuItem1.tapHandlerName!, rawDictionary1["tapHandlerName"]!,
-            "First menu item's tap handler should be what's in the first dictionary")
+        XCTAssertEqual(menuItem1.featureName!, rawDictionary1["featureName"]!,
+            "First menu item's feature name should be what's in the first dictionary")
         
         let rawDictionary2 = metadata![1]
         let menuItem2 = menuItems![1]
@@ -81,7 +81,7 @@ class MenuItemDefaultBuilderTests: XCTestCase {
             "Second menu item's subTitle should be what's in the second dictionary")
         XCTAssertEqual(menuItem2.iconName!, rawDictionary2["iconName"]!,
             "Second menu item's icon name should be what's in the second dictionary")
-        XCTAssertEqual(menuItem2.tapHandlerName!, rawDictionary2["tapHandlerName"]!,
-            "Second menu item's tap handler should be what's in the second dictionary")
+        XCTAssertEqual(menuItem2.featureName!, rawDictionary2["featureName"]!,
+            "Second menu item's feature name should be what's in the second dictionary")
     }
 }

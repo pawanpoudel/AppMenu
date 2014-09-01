@@ -15,10 +15,6 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("tableView: \(tableView)")
-        println("dataSource: \(dataSource)")
-        
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
     }
@@ -44,25 +40,38 @@ class MenuViewController: UIViewController {
         var menuItem: MenuItem? = notification!.object as? MenuItem
         
         if menuItem != nil {
-            var tapHandler: UIViewController?
+            var tapHandler: FeatureViewController?
             
-            switch menuItem!.tapHandlerName! {
-                case "ContributionsViewController":
-                tapHandler = ContributionsViewController()
-                
-                case "RepositoriesViewController":
-                tapHandler = RepositoriesViewController()
-                
-                case "PublicActivityViewController":
-                tapHandler = PublicActivityViewController()
-                
+            switch menuItem!.featureName! {
+                case "contributions":
+                tapHandler = ContributionsViewController(nibName: "ContributionsViewController",
+                                                         bundle: nil)
+                case "repositories":
+                tapHandler = RepositoriesViewController(nibName: "RepositoriesViewController",
+                                                        bundle: nil)
+                case "publicActivity":
+                tapHandler = PublicActivityViewController(nibName: "PublicActivityViewController",
+                                                          bundle: nil)
                 default:
                 tapHandler = nil
             }
             
             if tapHandler != nil {
-                self.navigationController.pushViewController(tapHandler, animated: true)
+                tapHandler!.featureName = menuItem!.featureName!
+                navigationController.pushViewController(tapHandler!, animated: true)
+                navigationController.pushViewController(tapHandler!, animated: true)
             }
+            
+            let vc = navigationController.topViewController
+            
+            let isIt = vc is ContributionsViewController
+            println("isIt: \(isIt)")
+            
+            let isItAgain = vc is MenuViewController
+            println("isItAgain: \(isItAgain)")
+            
+//            let feature = vc.valueForKey("featureName") as String            
+//            println("featureName: \(feature)")
         }
     }
 }

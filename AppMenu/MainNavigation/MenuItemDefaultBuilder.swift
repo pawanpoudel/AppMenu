@@ -24,7 +24,7 @@ class MenuItemDefaultBuilder : MenuItemBuilder {
                 let menuItem = MenuItem(title: title)
                 menuItem.subTitle = dictionary["subTitle"]
                 menuItem.iconName = dictionary["iconName"]
-                menuItem.tapHandlerName = dictionary["tapHandlerName"]
+                menuItem.featureName = dictionary["featureName"]
                 menuItems.append(menuItem)
             }
             else {

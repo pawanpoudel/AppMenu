@@ -2,10 +2,4 @@
 
 import UIKit
 
-struct MenuItem {
-    var title: String?
-}
-
-let menuItem = MenuItem(title: "New Item")
-
-menuItem
+var tapHandler: NSString?

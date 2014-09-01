@@ -9,8 +9,8 @@
 		<string>Repos contributed to</string>
 		<key>iconName</key>
 		<string>iconContributions</string>
-		<key>tapHandlerName</key>
-		<string>ContributionsViewController</string>
+		<key>featureName</key>
+		<string>contributions</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -19,8 +19,8 @@
 		<string>Repos collaborating</string>
 		<key>iconName</key>
 		<string>iconRepositories</string>
-		<key>tapHandlerName</key>
-		<string>RepositoriesViewController</string>
+		<key>featureName</key>
+		<string>repositories</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -29,8 +29,8 @@
 		<string>Activity viewable by anyone</string>
 		<key>iconName</key>
 		<string>iconPublicActivity</string>
-		<key>tapHandlerName</key>
-		<string>PublicActivityViewController</string>
+		<key>featureName</key>
+		<string>publicActivity</string>
 	</dict>
 </array>
 </plist>
